@@ -4,9 +4,7 @@ import "./PollComponent.scss";
 import RadioLabel from "../UI/radioLabel/RadioLabel";
 import BallWrapper from "../UI/ballWrapper/BallWrapper";
 
-
-const PollComponent = ({  onTestFinish}) => {
-
+const PollComponent = ({ onTestFinish }) => {
   const questions = [
     {
       id: 1,
@@ -17,8 +15,7 @@ const PollComponent = ({  onTestFinish}) => {
         { id: "25to35", label: "От 25 до 35 лет" },
         { id: "35to45", label: "От 35 до 45 лет" },
         { id: "over45", label: "Мне больше 45 лет" },
-        
-      ]
+      ],
     },
     {
       id: 2,
@@ -27,8 +24,8 @@ const PollComponent = ({  onTestFinish}) => {
         { id: "dry", label: "Сухая" },
         { id: "normal", label: "Нормальная" },
         { id: "combination", label: "Комбинированная" },
-        { id: "oily", label: "Жирная" }
-      ]
+        { id: "oily", label: "Жирная" },
+      ],
     },
     {
       id: 3,
@@ -37,27 +34,38 @@ const PollComponent = ({  onTestFinish}) => {
         { id: "yes", label: "Да" },
         { id: "no", label: "Нет" },
         { id: "sometimes", label: "Иногда" },
-       
-      ]
-    }
+      ],
+    },
   ];
 
-  
   const [step, setStep] = React.useState(0);
+
+  const [selectedOption, setSelectedOption] = React.useState(null);
 
   const question = questions[step];
 
-  const handleContinueClick = (index) => {
-    console.log("Результат:", step, index);
+  const handleRadioChange = (optionId) => {
+    setSelectedOption(optionId);
+  };
 
-    if (step === questions.length - 1) {
-      onTestFinish(); // Вызывает функцию при завершении теста
+  const handleContinueClick = () => {
+    if (selectedOption !== null) {
+      if (step === questions.length - 1) {
+        onTestFinish();
+      } else {
+        setStep(step + 1);
+        setSelectedOption(null); // Reset selected option for the next question
+      }
     } else {
-      setStep(step + 1);
+      alert("Please select an option before proceeding.");
     }
   };
 
-  
+  const handlePrevClick = () => {
+    if (step > 0) {
+      setStep(step - 1);
+    }
+  };
 
   return (
     <div className="poll_component_wrapper">
@@ -66,12 +74,17 @@ const PollComponent = ({  onTestFinish}) => {
         <div className="question_wrapper">
           <span className="question_qost">{`Вопрос ${question.id} из ${questions.length}`}</span>
         </div>
-        
-        <RadioLabel onContinueClick={handleContinueClick} question={question} step={step} />
+
+        <RadioLabel question={question} onRadioChange={handleRadioChange}/>
         <div className="button_wrapper">
-          <button className="prev" >Назад</button>
+          {step === 0 ? null : (
+            <button className="prev" onClick={handlePrevClick}>
+              Назад
+            </button>
+          )}
           <button className="next" onClick={handleContinueClick}>
-Дальше</button>
+            Дальше
+          </button>
         </div>
       </div>
     </div>

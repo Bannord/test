@@ -1,7 +1,5 @@
-const RadioLabel = ({ question, onContinueClick, step }) => {
-    const handleRadioChange = (index) => {
-      // Ничего не делаем при выборе радио - переход только по кнопке "Дальше"
-    };
+const RadioLabel = ({ question, onRadioChange}) => {
+   
   
     return (
       <div className="question">
@@ -10,7 +8,7 @@ const RadioLabel = ({ question, onContinueClick, step }) => {
           {question.options.map((option, index) => (
             <label key={option.id} htmlFor={option.id}>
               <input
-                onChange={() => handleRadioChange(index)}
+                onChange={() => onRadioChange(option.id)}
                 type="radio"
                 id={option.id}
                 name={question.id}

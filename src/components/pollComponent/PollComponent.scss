@@ -1,0 +1,79 @@
+.poll_component_wrapper {
+    margin: 50px;
+    width: 700px;
+    background-color: #DDF3FF;
+    
+
+    .poll_component_row {
+        margin: 35px;
+
+        .ball_question_wrapper {
+            width: 80px;
+            display: flex;
+            padding-top: 34px;
+            
+
+
+            
+    
+            .ball_question {
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                background-color: #00A5FF;
+                margin-right: 10px;
+            }
+
+            .ball_question:last-child {
+                margin-right: 0;
+            }
+        }
+        
+    
+        
+    
+        .question_wrapper {
+    
+            .question_qost {
+    
+                color: #9A9A9A;
+            }
+        }
+
+        .radio_items {
+            margin-bottom: 35px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button_wrapper {
+            padding-bottom: 65px;
+
+            .prev {
+                width: 91px;
+                height: 31px;
+                border-radius: 5px;
+                margin-right: 5px;
+                color: black;
+                background-color: white;
+                border: 0;
+            }
+    
+            .next {
+                width: 91px;
+                height: 31px;
+                border-radius: 5px;
+                color: white;
+                background-color: #00A5FF;
+                border: 0;
+            }
+        }
+
+       
+    
+    }
+
+   
+    
+    
+}

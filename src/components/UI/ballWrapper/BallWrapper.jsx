@@ -1,3 +1,5 @@
+import './BallWrapper.scss'
+
 const BallWrapper = ({currentStep}) => {
     return ( 
       <div className="ball_question_wrapper">

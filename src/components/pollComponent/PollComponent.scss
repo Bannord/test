@@ -63,3 +63,24 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  
+  .poll_component_wrapper {
+    width: 420px;
+  }
+}
+
+
+@media (max-width: 595px) {
+  .poll_component_wrapper {
+    width: 320px;
+  }
+}
+
+@media (max-width: 450px) {
+  .poll_component_wrapper {
+    width: 250px;
+  }
+}

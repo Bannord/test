@@ -1,25 +1,37 @@
+
+
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 
 
+
 const ListProduct = () => {
-    
+
 
       const [appState, setAppState] = useState();
       useEffect(() => {
-        const apiUrl = 'https://651d4aca44e393af2d597ff1.mockapi.io/products';
-        axios.get(apiUrl).then((resp) => setAppState(resp.data));
-      }, [setAppState]);
+        const fetchData = async () => {
+          try {
+            const response = await axios.get('https://651d4aca44e393af2d597ff1.mockapi.io/products');
+           
+            setAppState(response.data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+      }, []);
+        
     return ( 
         <>
         {appState?.map(el => 
         (   
             <div className="content_item" key={el.id}>
             <div className="img_wrapper">
-              {console.log(el)}
-              {console.log(el.img)}
+             
               <div className="img_product">
-                <img src={el.image} alt="#image" />
+                <img src={el.img} alt="#image" />
               </div>
             </div>
             <span className="text_item">

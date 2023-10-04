@@ -6,6 +6,10 @@ import TitleItem from "../titleItem/TitleItem";
 const Main = () => {
   const [isTestFinished, setIsTestFinished] = React.useState(false);
 
+
+  const url = 'https://651d4aca44e393af2d597ff1.mockapi.io/products';
+ fetch(url).then(response => response.json()).then(commits => console.log(commits))
+  
   const handleTestFinish = () => {
     setIsTestFinished(true);
   };

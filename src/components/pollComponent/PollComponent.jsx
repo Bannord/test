@@ -54,7 +54,7 @@ const PollComponent = ({ onTestFinish }) => {
         onTestFinish();
       } else {
         setStep(step + 1);
-        setSelectedOption(null); // Reset selected option for the next question
+        setSelectedOption(null); 
       }
     } else {
       alert("Please select an option before proceeding.");
@@ -70,7 +70,7 @@ const PollComponent = ({ onTestFinish }) => {
   return (
     <div className="poll_component_wrapper">
       <div className="poll_component_row">
-        <BallWrapper />
+        <BallWrapper currentStep ={step} />
         <div className="question_wrapper">
           <span className="question_qost">{`Вопрос ${question.id} из ${questions.length}`}</span>
         </div>

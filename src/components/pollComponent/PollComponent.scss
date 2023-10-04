@@ -1,79 +1,65 @@
 .poll_component_wrapper {
-    
-    width: 700px;
-    background-color: #DDF3FF;
-    
+  width: 700px;
+  background-color: #ddf3ff;
 
-    .poll_component_row {
-        margin: 35px;
+  .poll_component_row {
+    margin: 35px;
 
-        .ball_question_wrapper {
-            width: 80px;
-            display: flex;
-            padding-top: 34px;
-            
+    .ball_question_wrapper {
+      width: 80px;
+      display: flex;
+      padding-top: 34px;
 
+      .ball_question {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        background-color: #89d1f8;
+        margin-right: 10px;
+      }
 
-            
-    
-            .ball_question {
-                width: 20px;
-                height: 20px;
-                border-radius: 20px;
-                background-color: #00A5FF;
-                margin-right: 10px;
-            }
+      .active_ball {
+        background-color: #00a5ff;
+      }
 
-            .ball_question:last-child {
-                margin-right: 0;
-            }
-        }
-        
-    
-        
-    
-        .question_wrapper {
-    
-            .question_qost {
-    
-                color: #9A9A9A;
-            }
-        }
-
-        .radio_items {
-            margin-bottom: 35px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .button_wrapper {
-            padding-bottom: 65px;
-
-            .prev {
-                width: 91px;
-                height: 31px;
-                border-radius: 5px;
-                margin-right: 5px;
-                color: black;
-                background-color: white;
-                border: 0;
-            }
-    
-            .next {
-                width: 91px;
-                height: 31px;
-                border-radius: 5px;
-                color: white;
-                background-color: #00A5FF;
-                border: 0;
-            }
-        }
-
-       
-    
+      .ball_question:last-child {
+        margin-right: 0;
+      }
     }
 
-   
-    
-    
+    .question_wrapper {
+      .question_qost {
+        color: #9a9a9a;
+      }
+    }
+
+    .radio_items {
+      margin-bottom: 35px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .button_wrapper {
+      padding-bottom: 65px;
+
+      .prev {
+        width: 91px;
+        height: 31px;
+        border-radius: 5px;
+        margin-right: 5px;
+        color: black;
+        background-color: white;
+        border: 0;
+      }
+
+      .next {
+        width: 91px;
+        height: 31px;
+        border-radius: 5px;
+        color: white;
+        background-color: #00a5ff;
+        border: 0;
+      }
+    }
+  }
 }

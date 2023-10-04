@@ -1,10 +1,10 @@
-const BallWrapper = () => {
+const BallWrapper = ({currentStep}) => {
     return ( 
-        <div className="ball_question_wrapper">
-          <div className="ball_question"></div>
-          <div className="ball_question"></div>
-          <div className="ball_question"></div>
-        </div>
+      <div className="ball_question_wrapper">
+      {[0, 1, 2].map((index) => (
+        <div className={`ball_question ${index === currentStep ? 'active_ball' : 'ball'}`} key={index}></div>
+      ))}
+    </div>
      );
 }
  

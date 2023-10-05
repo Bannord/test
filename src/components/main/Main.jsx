@@ -3,6 +3,7 @@ import ListProduct from "../listProduct/ListProduct";
 import PollComponent from "../pollComponent/PollComponent";
 import "./Main.scss";
 import TitleItem from "../titleItem/TitleItem";
+import PaginationList from "../paginationList/PaginationList";
 const Main = () => {
   const [isTestFinished, setIsTestFinished] = React.useState(false);
 
@@ -37,6 +38,7 @@ const Main = () => {
             {isTestFinished && <ListProduct />}
           </div>
         </div>
+        <PaginationList />
       </div>
     </>
   );

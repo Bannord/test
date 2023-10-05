@@ -1,4 +1,11 @@
+* {
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
 .main_wrapper {
+    
     width: 1400px;
     margin-left: 40px;
     .content_info {
@@ -74,6 +81,25 @@
                     font-weight: bold;
                 }
             }
+        }
+    }
+
+    .paginatop_row {
+        
+        display: flex;
+        
+
+        .pagination_link  {
+            color: #B8B8B8;
+            margin-right: 12px;
+
+            
+        }
+        .active {
+            color: #00A5FF;
+        }
+        .pagination_link:last-child {
+            margin-right: 0;
         }
     }
 

@@ -88,7 +88,7 @@ const PollComponent = ({ onTestFinish }) => {
           </button>
         </div>
       </div>
-      <PaginationList />
+      
     </div>
   );
 };

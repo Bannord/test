@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
+import PaginationList from '../paginationList/PaginationList';
 
 
 
@@ -43,6 +44,7 @@ const ListProduct = () => {
             </div>
           </div>
         ))}
+        <PaginationList />
         </>
      );
 }

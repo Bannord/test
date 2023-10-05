@@ -14,20 +14,22 @@ const elements = paginationCostLink.map((number, index) => {
         if (index === 0) {
          return   <li key={number} className='active'>{number} </li>;
         }
+        
       return <li key={number}>{number} </li>;
+      
     } else if (index === 3) {
-      return <li key={index}>... </li>;
+      return <li key={index} >... </li>;
     }
-    return null;
+    return null
   });
   // костыль
 
     return ( 
         <div className="pagination_wrapper">
           <ul className="paginatop_row">
-            {elements.map((el) => (
-                <PaginationItem el={el}/>
-            ))}
+          {elements.filter(el => el !== null).map((el) => (
+          <PaginationItem el={el}/>
+      ))}
           </ul>
         </div>
      );

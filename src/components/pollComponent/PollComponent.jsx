@@ -3,6 +3,7 @@ import "./PollComponent.scss";
 
 import RadioLabel from "../UI/radioLabel/RadioLabel";
 import BallWrapper from "../UI/ballWrapper/BallWrapper";
+import PaginationList from "../paginationList/PaginationList";
 
 const PollComponent = ({ onTestFinish }) => {
   const questions = [
@@ -87,6 +88,7 @@ const PollComponent = ({ onTestFinish }) => {
           </button>
         </div>
       </div>
+      <PaginationList />
     </div>
   );
 };

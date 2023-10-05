@@ -3,13 +3,11 @@ import ListProduct from "../listProduct/ListProduct";
 import PollComponent from "../pollComponent/PollComponent";
 import "./Main.scss";
 import TitleItem from "../titleItem/TitleItem";
-import PaginationList from "../paginationList/PaginationList";
+
 const Main = () => {
   const [isTestFinished, setIsTestFinished] = React.useState(false);
 
 
-//   const url = 'https://651d4aca44e393af2d597ff1.mockapi.io/products';
-//  fetch(url).then(response => response.json()).then(commits => console.log(commits))
 
 
   
@@ -38,7 +36,7 @@ const Main = () => {
             {isTestFinished && <ListProduct />}
           </div>
         </div>
-        <PaginationList />
+        
       </div>
     </>
   );
